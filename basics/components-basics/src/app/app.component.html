@@ -1,13 +1,16 @@
 <div class="container">
   <h1>Hello from app component</h1>
-  <hr>
-  <h3>Alert messages:</h3>
-  <app-success-alert></app-success-alert>
-  <app-warning-alert></app-warning-alert>
-  <hr>
-  <label>Username</label>
-  <input type="text" class="form-control" [(ngModel)]="username">
-  <br>
-  <p>Your username is: {{ username }}</p>
-  <button class="btn btn-primary" [disabled]="emptyUser()" (click)=" username = ''">Reset User</button>
+  <hr />
+  <button class="btn btn-primary" (click)="onClickSecret()">
+    {{ secretVerb }} Secret Password
+  </button>
+  <p *ngIf="showSecret">Secret Password: "Tuna"</p>
+  <br />
+  <div
+    *ngFor="let logItem of log"
+    [ngStyle]="{ backgroundColor: logItem >= 5 ? 'red' : 'transparent' }"
+    [ngClass]="{'white-text': logItem >=5}"
+  >
+    You have shown the password {{ logItem }} time(s)
+  </div>
 </div>
