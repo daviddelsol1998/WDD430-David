@@ -4,4 +4,10 @@
   <h3>Alert messages:</h3>
   <app-success-alert></app-success-alert>
   <app-warning-alert></app-warning-alert>
+  <hr>
+  <label>Username</label>
+  <input type="text" class="form-control" [(ngModel)]="username">
+  <br>
+  <p>Your username is: {{ username }}</p>
+  <button class="btn btn-primary" [disabled]="emptyUser()" (click)=" username = ''">Reset User</button>
 </div>

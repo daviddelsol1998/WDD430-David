@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'components-basics';
+  username = ""
+  emptyUser () {
+    if (this.username === '') {
+      return true
+    } else {
+      return false
+    }
+  }
 }

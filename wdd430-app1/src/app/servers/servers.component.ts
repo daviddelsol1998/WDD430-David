@@ -6,8 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  
+  allowNewServer = false;
 
-  constructor() { }
+  serverId = 10;
+  serverStatus = 'offline';
+
+  getServerStaus() {
+    return this.serverStatus
+  }
+  
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServer = true;
+    },2000);
+  }
 
   ngOnInit(): void {
   }
