@@ -10,9 +10,9 @@ export class MessageListComponent implements OnInit {
   //@Input() message: Message;
   
   messages: Message[] =[
-    new Message(1,'Hello', 'Hi from my angular single-page app','David'),
-    new Message(2,'Reminder', 'The semester is almost over','Max'),
-    new Message(3,'Plans', 'Hurry up and graduate already','Julio')
+    new Message(1,'Greetings', 'How is everything going?','Christian'),
+    new Message(2,'Reminder', 'Hey, do not forget to do your homework.','Geo'),
+    new Message(3,'Weekend', 'Would you like to go for a walk this friday?','Kevin')
   ];
 
   constructor() { }

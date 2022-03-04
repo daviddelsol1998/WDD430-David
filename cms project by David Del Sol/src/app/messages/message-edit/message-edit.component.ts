@@ -13,7 +13,7 @@ export class MessageEditComponent implements OnInit {
   @ViewChild('msgText') msgText: ElementRef; 
   @Output() addMessageEvent = new EventEmitter<Message>();
 
-  currentSender:string ='David';
+  currentSender:string ='christian';
   constructor() { }
 
   ngOnInit(): void {
