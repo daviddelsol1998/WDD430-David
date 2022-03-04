@@ -4,13 +4,11 @@ import { Document } from '../document.model';
 @Component({
   selector: 'app-document-detail',
   templateUrl: './document-detail.component.html',
-  styleUrls: ['./document-detail.component.css']
+  styleUrls: ['./document-detail.component.css'],
 })
 export class DocumentDetailComponent implements OnInit {
   @Input() document: Document;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
