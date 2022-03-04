@@ -62,7 +62,7 @@ router.put("/:id", (req, res, next) => {
       contact.email = req.body.email;
       contact.phone = req.body.phone;
       contact.imageUrl = req.body.imageUrl;
-      contact.group= req.body.group;
+      contact.group = req.body.group;
 
       Contact.updateOne({ id: req.params.id }, contact)
         .then((result) => {
