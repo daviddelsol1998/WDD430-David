@@ -4,11 +4,13 @@ import { Contact } from './contact.model';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css'],
+  styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
   @Input() selectedContact: Contact;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }
