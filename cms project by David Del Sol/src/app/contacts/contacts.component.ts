@@ -5,15 +5,18 @@ import { ContactService } from './contact.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css'],
+  styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
   @Input() selectedContact: Contact;
-  constructor(private contactService: ContactService) {}
+  constructor(private contactService: ContactService) { }
 
   ngOnInit(): void {
-    this.contactService.contactSelectedEvent.subscribe((contact: Contact) => {
-      this.selectedContact = contact;
-    });
+    this.contactService.contactSelectedEvent.subscribe(
+      (contact: Contact)=>{
+        this.selectedContact = contact;
+      }
+    );
   }
+
 }
